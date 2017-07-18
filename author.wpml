@@ -1,0 +1,13 @@
+hd()
+q(array="output",key="name",key="source", return="source")
+in(name="$stream", value="\"\"", name="$task", value="\"Add\"")
+h(text="Add/Remove Author",size=1)
+f(action="<?php echo $_SERVER['PHP_SELF'].\"?name=\".$name.\"&source=\".$source; ?>",
+  type="radio",name="task",value="Add",
+  linefeed=1, type="radio",name="task",value="Remove",
+  layout=1, text="Stream",name="stream",value="$stream",
+  type="submit", name="submit", value="Submit")
+se(name="$para", condition="$task=='Add'",value="$name",condition="$task=='Remove'",value="\"-r \".$name")
+o(proc="./addauthor", para="$para", stdin="$stream")
+l(text="Back to login page", link="index.php")
+ft()

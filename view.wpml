@@ -1,0 +1,20 @@
+hd()
+q(array="output",key="name",key="source", return="source")
+in(name="$message",value="isset($_POST['message'])?$_POST['message']:\"\"")
+e(exe="python view.py", para="\"user=\".$name.\", action=checkStreams\"",output="$stream")
+h(text="View Post",size=1, align=1)
+a(condition="checkStreams", func="unset($_POST['stream'])")
+f(action="<?php echo $_SERVER['PHP_SELF'].\"?name=\".$name.\"&source=\".$source; ?>", align=1,
+  layout=1, exe="python view.py", para="\"user=\".$name.\", action=order\"", output="$message", type="submit", name="order", value="Toggle Order",
+  layout=1, exe="python view.py", para="\"user=\".$name.\", action=markAll\"", output="$message", type="submit", name="markAll", value="Mark All Read",
+  layout=1, exe="python view.py", para="\"user=\".$name.\", action=checkNew\"", output="$message", type="submit", name="checkNew", value="Check New Posts",
+  layout=0, linefeed=1, exe="python view.py", para="\"user=\".$name.\", action=checkStreams\"", output="$stream", type="submit", name="checkStreams", value="Look For Streams",
+  layout=1, text="Stream",name="stream",value="$stream",
+  layout=0, linefeed=1, exe="python view.py", para="\"user=\".$name.\", action=specifyStreams, streams=\".$_POST[\"stream\"]",output="$message", type="submit", name="submit", value="Submit",
+  layout=0, linefeed=1, type="areaout",name="postBox",value="$message",
+  layout=1, exe="python view.py", para="\"user=\".$name.\", action=previous\"", output="$message", type="submit", name="previous", value="Previous",
+  layout=0, exe="python view.py", para="\"user=\".$name.\", action=next\"", output="$message", type="submit", name="next", value="Next",
+  layout=0, type="hidden", name="message", value="$message")  
+s(code="<br><br>")
+l(text="Back to login page", link="index.php")
+ft()

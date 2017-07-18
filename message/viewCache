@@ -1,0 +1,11 @@
+10
+['dogs']
+{'dogs': 1}
+6
+0
+0
+0
+0
+5
+0
+[['dogs', ['Sender: Joseph\n', 'Date: Feb. 11, 2017 11:54 AM\n', 'I like dogs.\n', 'They run.\n', 'They jump.\n']], ['dogs', ['Sender: Arthur\n', 'Date: Feb. 11, 2017 12:32 PM\n', 'I like brown dogs.\n', 'They run.\n', 'They jump.\n']], ['dogs', ['Sender: Natalie\n', 'Date: Feb. 13, 2017 17:50 PM\n', 'I hate dogs.\n', 'It always barks\n']], ['dogs', ['Sender: Joseph\n', 'Date: Mar. 12, 2017 16:30 PM\n', 'This is my 2nd test post for php\n']], ['dogs', ['Sender: Joseph\n', 'Date: Mar. 12, 2017 16:48 PM\n', 'after name = submit\n']], ['dogs', ['4\n', 'Sender: Joseph\n', 'Date: Mar. 12, 2017 16:54 PM\n', 'This is my test post for php\n']]]

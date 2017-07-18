@@ -1,0 +1,11 @@
+hd()
+q(array="output",key="name",key="source", return="source")
+in(name="$stream", value="\"\"", name="$message", value="\"\"")
+h(text="Add Post",size=1)
+f(action="<?php echo $_SERVER['PHP_SELF'].\"?name=\".$name.\"&source=\".$source; ?>",
+  linefeed=1, text="Stream",name="stream",value="$stream",
+  type="areain",name="message",value="isset($_POST['message'])?$_POST['message']:$message")
+o(proc="./post", para="$name", stdin="$stream", stdin="$message")
+s(code="<br><br>")
+l(text="Back to login page", link="index.php")
+ft()
